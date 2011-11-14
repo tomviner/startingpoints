@@ -41,7 +41,7 @@ except ImportError:
 conf = {
     '/': {
         'tools.encode.on': True,
-        'tools.encode.encoding' : 'utf-8',
+        'tools.encode.encoding': 'utf-8',
         'tools.gzip.on': True,
     },
     '/media': {
@@ -52,7 +52,7 @@ conf = {
 }
 
 if __name__=='__main__':
-    cherrypy.server.socket_host = '0.0.0.0'
+    cherrypy.server.socket_host = '127.0.0.1'
     cherrypy.quickstart(CherryStart(), config=conf)
 
 application = cherrypy.Application(CherryStart(), script_name=None, config=conf)
